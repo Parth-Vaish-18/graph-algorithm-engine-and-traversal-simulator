@@ -1,6 +1,6 @@
 # Full-Stack Graph Algorithm Engine & Traversal Simulator
 
-> **📄 Read the Graph Alorithm Report:** [Click Here to View PDF](./Graph%20Algorithm%Report.pdf)
+> **📄 Read the Graph Alorithm Report:** [Click Here to View PDF](./Graph%20Algorithm%20Report.pdf)
 
 
 A high-performance algorithmic benchmarking and visualization suite designed to analyze graph traversal algorithms. This project bridges a highly optimized, compiled C++17 backend with a responsive, canvas-based JavaScript frontend. 
