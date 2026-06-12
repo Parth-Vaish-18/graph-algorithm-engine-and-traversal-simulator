@@ -1,5 +1,8 @@
 # Full-Stack Graph Algorithm Engine & Traversal Simulator
 
+> **📄 Read the Graph Alorithm Report:** [Click Here to View PDF](./Graph%20Algorithm%Report.pdf)
+
+
 A high-performance algorithmic benchmarking and visualization suite designed to analyze graph traversal algorithms. This project bridges a highly optimized, compiled C++17 backend with a responsive, canvas-based JavaScript frontend. 
 
 The core objective of this project is to move beyond standard console-based output, providing a real-time, interactive environment to compare the time complexity, spatial exploration, and operational efficiency of Dijkstra’s Algorithm, A* Search, Breadth-First Search (BFS), and Depth-First Search (DFS) on massive datasets.
