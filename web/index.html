@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PathFind Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1><span>PathFind</span> Pro</h1>
+        <p>Graph Algorithm Visualizer & Benchmarker</p>
+    </header>
+
+    <div class="layout">
+        <aside class="sidebar">
+            <section>
+                <h2>Controls</h2>
+                <button id="load-btn" class="btn btn-secondary">Load JSON Manually</button>
+                <input type="file" id="json-file" accept=".json" style="display:none;">
+                <button id="animate-btn" class="btn btn-primary" disabled>Animate Paths</button>
+                <button id="reset-btn" class="btn btn-secondary" disabled>Reset View</button>
+            </section>
+
+            <section>
+                <h2>Algorithms</h2>
+                <div class="algo-toggles">
+                    <div class="algo-toggle active" data-algo="Dijkstra"><div class="dot"></div>Dijkstra</div>
+                    <div class="algo-toggle active" data-algo="A*"><div class="dot"></div>A*</div>
+                    <div class="algo-toggle active" data-algo="BFS"><div class="dot"></div>BFS</div>
+                    <div class="algo-toggle active" data-algo="DFS"><div class="dot"></div>DFS</div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Animation Speed</h2>
+                <input type="range" id="speed-range" min="1" max="10" value="5">
+                <label id="speed-label" style="text-align: right; display: block; margin-top: 4px;">Medium</label>
+            </section>
+
+            <section>
+                <h2>Benchmark Comparison</h2>
+                <div style="display: flex; gap: 8px; margin-bottom: 12px;">
+                    <button class="bench-tab active btn btn-secondary" data-metric="nodesVisited" style="font-size: 0.75rem; padding: 6px;">Nodes Visited</button>
+                    <button class="bench-tab btn btn-secondary" data-metric="timeMs" style="font-size: 0.75rem; padding: 6px;">Time (µs)</button>
+                </div>
+                <div class="bench-panel">
+                    <div id="bench-rows"></div>
+                </div>
+            </section>
+        </aside>
+
+        <main style="display: flex; flex-direction: column; overflow: hidden; grid-row: 1 / 3; height: 100%;">
+            <div class="main-top" id="stat-cards">
+                </div>
+            <div class="canvas-area" style="flex: 1;">
+                <canvas id="graph-canvas"></canvas>
+            </div>
+        </main>
+    </div>
+
+    <div id="status"></div>
+    <script src="visualizer.js"></script>
+</body>
+</html>
